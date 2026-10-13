@@ -36,8 +36,12 @@ namespace CdAndVinyl
             string user_choice_artist = txtInputArtist.Text;
             string user_choice_mediumtype = txtInputType.Text;
             Medium UserNewAlbum = new Medium();
-            UserNewAlbum.Title(user_choice_title);
-
+            UserNewAlbum.Title = user_choice_title;
+            UserNewAlbum.Artist = user_choice_artist;
+            UserNewAlbum.Type = user_choice_mediumtype;
+            collection.Add(UserNewAlbum);
+            DataGridCvUi.DataSource = null;
+            DataGridCvUi.DataSource = collection;
 
         }
     }
