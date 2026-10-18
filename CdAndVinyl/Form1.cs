@@ -42,6 +42,9 @@ namespace CdAndVinyl
             collection.Add(UserNewAlbum);
             DataGridCvUi.DataSource = null;
             DataGridCvUi.DataSource = collection;
+            txtInputTitle.Clear();
+            txtInputArtist.Clear();
+            txtInputType.Clear();
 
         }
     }

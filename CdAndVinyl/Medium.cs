@@ -12,4 +12,26 @@ namespace CdAndVinyl
 
 
     }
+
+    public class Logic
+    {
+        public bool userinput_truefalse(string user_choice)
+        {
+            if (int.TryParse(user_choice, out int number))
+            {
+                return false;
+            }
+
+            if (user_choice.Length > 20)
+            {
+                return false;
+            }
+
+            else
+            {
+                return true;
+            }
+            
+        }
+    }
 }
