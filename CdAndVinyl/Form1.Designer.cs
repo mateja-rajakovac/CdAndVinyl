@@ -41,6 +41,7 @@
             titleDataGridViewTextBoxColumn = new DataGridViewTextBoxColumn();
             artistDataGridViewTextBoxColumn = new DataGridViewTextBoxColumn();
             typeDataGridViewTextBoxColumn = new DataGridViewTextBoxColumn();
+            txtNotice = new Label();
             ((System.ComponentModel.ISupportInitialize)DataGridCvUi).BeginInit();
             ((System.ComponentModel.ISupportInitialize)mediumBindingSource).BeginInit();
             SuspendLayout();
@@ -112,9 +113,9 @@
             DataGridCvUi.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             DataGridCvUi.Columns.AddRange(new DataGridViewColumn[] { titleDataGridViewTextBoxColumn, artistDataGridViewTextBoxColumn, typeDataGridViewTextBoxColumn });
             DataGridCvUi.DataSource = mediumBindingSource;
-            DataGridCvUi.Location = new Point(48, 29);
+            DataGridCvUi.Location = new Point(80, 12);
             DataGridCvUi.Name = "DataGridCvUi";
-            DataGridCvUi.Size = new Size(464, 413);
+            DataGridCvUi.Size = new Size(403, 420);
             DataGridCvUi.TabIndex = 8;
             // 
             // mediumBindingSource
@@ -126,18 +127,32 @@
             titleDataGridViewTextBoxColumn.DataPropertyName = "Title";
             titleDataGridViewTextBoxColumn.HeaderText = "Title";
             titleDataGridViewTextBoxColumn.Name = "titleDataGridViewTextBoxColumn";
+            titleDataGridViewTextBoxColumn.Width = 120;
             // 
             // artistDataGridViewTextBoxColumn
             // 
             artistDataGridViewTextBoxColumn.DataPropertyName = "Artist";
             artistDataGridViewTextBoxColumn.HeaderText = "Artist";
             artistDataGridViewTextBoxColumn.Name = "artistDataGridViewTextBoxColumn";
+            artistDataGridViewTextBoxColumn.Width = 120;
             // 
             // typeDataGridViewTextBoxColumn
             // 
             typeDataGridViewTextBoxColumn.DataPropertyName = "Type";
             typeDataGridViewTextBoxColumn.HeaderText = "Type";
             typeDataGridViewTextBoxColumn.Name = "typeDataGridViewTextBoxColumn";
+            typeDataGridViewTextBoxColumn.Width = 120;
+            // 
+            // txtNotice
+            // 
+            txtNotice.AutoSize = true;
+            txtNotice.Font = new Font("Verdana", 9F, FontStyle.Italic, GraphicsUnit.Point, 0);
+            txtNotice.ForeColor = Color.Red;
+            txtNotice.Location = new Point(266, 446);
+            txtNotice.Name = "txtNotice";
+            txtNotice.Size = new Size(42, 14);
+            txtNotice.TabIndex = 9;
+            txtNotice.Text = "label1";
             // 
             // Form1
             // 
@@ -145,6 +160,7 @@
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = SystemColors.ControlDark;
             ClientSize = new Size(562, 586);
+            Controls.Add(txtNotice);
             Controls.Add(DataGridCvUi);
             Controls.Add(btInput);
             Controls.Add(txtType);
@@ -172,9 +188,10 @@
         private Label txtType;
         private Button btInput;
         private DataGridView DataGridCvUi;
+        private BindingSource mediumBindingSource;
         private DataGridViewTextBoxColumn titleDataGridViewTextBoxColumn;
         private DataGridViewTextBoxColumn artistDataGridViewTextBoxColumn;
         private DataGridViewTextBoxColumn typeDataGridViewTextBoxColumn;
-        private BindingSource mediumBindingSource;
+        private Label txtNotice;
     }
 }
