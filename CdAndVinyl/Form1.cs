@@ -42,6 +42,22 @@ namespace CdAndVinyl
 
         }
 
+        private void check_userchoice(string user_choice_title, string user_choice_artist, string user_choice_mediumtype)
+        {
+            
+            Logic logic = new Logic();
+
+            bool get_bool_ta = logic.userinput_bool(user_choice_title, user_choice_artist);
+            
+            if (get_bool_ta == true)
+            {
+
+            }
+
+            
+
+        }
+
         private void update_datasource_datagrid()
         {
             DataGridCvUi.DataSource = null;
