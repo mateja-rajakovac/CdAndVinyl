@@ -37,10 +37,10 @@
             txtType = new Label();
             btInput = new Button();
             DataGridCvUi = new DataGridView();
-            mediumBindingSource = new BindingSource(components);
             titleDataGridViewTextBoxColumn = new DataGridViewTextBoxColumn();
             artistDataGridViewTextBoxColumn = new DataGridViewTextBoxColumn();
             typeDataGridViewTextBoxColumn = new DataGridViewTextBoxColumn();
+            mediumBindingSource = new BindingSource(components);
             txtNotice = new Label();
             ((System.ComponentModel.ISupportInitialize)DataGridCvUi).BeginInit();
             ((System.ComponentModel.ISupportInitialize)mediumBindingSource).BeginInit();
@@ -52,7 +52,6 @@
             txtInputType.Name = "txtInputType";
             txtInputType.Size = new Size(311, 23);
             txtInputType.TabIndex = 0;
-            txtInputType.TextChanged += txtInputType_TextChanged;
             // 
             // txtInputArtist
             // 
@@ -60,7 +59,6 @@
             txtInputArtist.Name = "txtInputArtist";
             txtInputArtist.Size = new Size(311, 23);
             txtInputArtist.TabIndex = 1;
-            txtInputArtist.TextChanged += txtInputArtist_TextChanged;
             // 
             // txtInputTitle
             // 
@@ -68,7 +66,6 @@
             txtInputTitle.Name = "txtInputTitle";
             txtInputTitle.Size = new Size(311, 23);
             txtInputTitle.TabIndex = 3;
-            txtInputTitle.TextChanged += txtInputTitle_TextChanged;
             // 
             // txtTitle
             // 
@@ -118,10 +115,6 @@
             DataGridCvUi.Size = new Size(403, 420);
             DataGridCvUi.TabIndex = 8;
             // 
-            // mediumBindingSource
-            // 
-            mediumBindingSource.DataSource = typeof(Medium);
-            // 
             // titleDataGridViewTextBoxColumn
             // 
             titleDataGridViewTextBoxColumn.DataPropertyName = "Title";
@@ -143,6 +136,10 @@
             typeDataGridViewTextBoxColumn.Name = "typeDataGridViewTextBoxColumn";
             typeDataGridViewTextBoxColumn.Width = 120;
             // 
+            // mediumBindingSource
+            // 
+            mediumBindingSource.DataSource = typeof(Medium);
+            // 
             // txtNotice
             // 
             txtNotice.AutoSize = true;
@@ -150,9 +147,8 @@
             txtNotice.ForeColor = Color.Red;
             txtNotice.Location = new Point(266, 446);
             txtNotice.Name = "txtNotice";
-            txtNotice.Size = new Size(42, 14);
+            txtNotice.Size = new Size(0, 14);
             txtNotice.TabIndex = 9;
-            txtNotice.Text = "label1";
             // 
             // Form1
             // 

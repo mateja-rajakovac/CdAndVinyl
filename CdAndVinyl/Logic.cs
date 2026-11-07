@@ -6,46 +6,43 @@ namespace CdAndVinyl
 {
     public class Logic
     {
-        public bool userinput_bool(string user_choice_title, string user_choice_artist)
+        public bool check_space(string type, string artist, string title)
         {
+            List<string> user_input = new List<string>() {type, artist, title};
 
-            if (int.TryParse(user_choice_title, out int a))
-            {
-                return false;
-            }
+            if (string.IsNullOrWhiteSpace(type) || string.IsNullOrWhiteSpace(artist) || string.IsNullOrWhiteSpace(title))
+                {
+                    return true;
+                }
 
-            if (int.TryParse(user_choice_artist, out int b))
-            {
-                return false;
-            }
-
-
-            if (user_choice_title.Length > 50 || user_choice_artist.Length > 50)
-            {
-                return false;
-            }
+            if (user_input.Any(s => s.Length >= 50))
+                {
+                    return true;
+                }
 
             else
+            {
+                return false;
+            }
+        }
+
+        public bool check_mediumtype(string type)
+        {
+            List<string> medium_type = new List<string>() { "cd", "vinyl" };
+            string type_lower = type.ToLower();
+
+            if (medium_type.Contains(type_lower))
             {
                 return true;
             }
 
-        }
-
-        public string mediuminput_stringreturn(string user_choice_mediumtype)
-        {
-            string user_choice_mediumtype_lower = user_choice_mediumtype.ToLower();
-
-            if (user_choice_mediumtype_lower != "cd" && user_choice_mediumtype_lower != "vinyl")
-            {
-                return "INVALID";
-            }
-
             else
             {
-                return "";
+                return false;
             }
 
         }
+
+
     }
 }
