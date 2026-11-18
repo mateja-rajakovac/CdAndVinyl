@@ -1,11 +1,15 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Text;
+using System.Text.Json;
 
 namespace CdAndVinyl
 {
     public class Logic
     {
+        public List<Medium> collection = new List<Medium>();
+
+
         public bool check_space(string type, string artist, string title)
         {
             List<string> user_input = new List<string>() {type, artist, title};
@@ -40,6 +44,17 @@ namespace CdAndVinyl
             {
                 return false;
             }
+
+        }
+
+        public void new_medium(Medium m)
+        {
+            collection.Add(m);
+
+            var options = new JsonSerializerOptions();
+            options.WriteIndented = true;
+
+            string jsonstr = JsonSerializer.Serialize(collection);
 
         }
 

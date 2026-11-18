@@ -48,21 +48,21 @@
             // 
             // txtInputType
             // 
-            txtInputType.Location = new Point(133, 531);
+            txtInputType.Location = new Point(172, 531);
             txtInputType.Name = "txtInputType";
             txtInputType.Size = new Size(311, 23);
             txtInputType.TabIndex = 0;
             // 
             // txtInputArtist
             // 
-            txtInputArtist.Location = new Point(133, 502);
+            txtInputArtist.Location = new Point(172, 502);
             txtInputArtist.Name = "txtInputArtist";
             txtInputArtist.Size = new Size(311, 23);
             txtInputArtist.TabIndex = 1;
             // 
             // txtInputTitle
             // 
-            txtInputTitle.Location = new Point(133, 473);
+            txtInputTitle.Location = new Point(172, 473);
             txtInputTitle.Name = "txtInputTitle";
             txtInputTitle.Size = new Size(311, 23);
             txtInputTitle.TabIndex = 3;
@@ -70,33 +70,36 @@
             // txtTitle
             // 
             txtTitle.AutoSize = true;
-            txtTitle.Location = new Point(64, 476);
+            txtTitle.Font = new Font("Verdana", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            txtTitle.Location = new Point(52, 476);
             txtTitle.Name = "txtTitle";
-            txtTitle.Size = new Size(63, 15);
+            txtTitle.Size = new Size(77, 14);
             txtTitle.TabIndex = 4;
             txtTitle.Text = "Input-Title";
             // 
             // txtArtist
             // 
             txtArtist.AutoSize = true;
-            txtArtist.Location = new Point(59, 505);
+            txtArtist.Font = new Font("Verdana", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            txtArtist.Location = new Point(48, 505);
             txtArtist.Name = "txtArtist";
-            txtArtist.Size = new Size(68, 15);
+            txtArtist.Size = new Size(84, 14);
             txtArtist.TabIndex = 5;
             txtArtist.Text = "Input-Artist";
             // 
             // txtType
             // 
             txtType.AutoSize = true;
-            txtType.Location = new Point(12, 534);
+            txtType.Font = new Font("Verdana", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            txtType.Location = new Point(20, 534);
             txtType.Name = "txtType";
-            txtType.Size = new Size(115, 15);
+            txtType.Size = new Size(137, 14);
             txtType.TabIndex = 6;
             txtType.Text = "Input-Medium-Type";
             // 
             // btInput
             // 
-            btInput.Location = new Point(462, 505);
+            btInput.Location = new Point(501, 505);
             btInput.Name = "btInput";
             btInput.Size = new Size(85, 23);
             btInput.TabIndex = 7;
@@ -107,10 +110,11 @@
             // DataGridCvUi
             // 
             DataGridCvUi.AutoGenerateColumns = false;
+            DataGridCvUi.BackgroundColor = SystemColors.ActiveCaption;
             DataGridCvUi.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             DataGridCvUi.Columns.AddRange(new DataGridViewColumn[] { titleDataGridViewTextBoxColumn, artistDataGridViewTextBoxColumn, typeDataGridViewTextBoxColumn });
             DataGridCvUi.DataSource = mediumBindingSource;
-            DataGridCvUi.Location = new Point(80, 12);
+            DataGridCvUi.Location = new Point(101, 12);
             DataGridCvUi.Name = "DataGridCvUi";
             DataGridCvUi.Size = new Size(403, 420);
             DataGridCvUi.TabIndex = 8;
@@ -154,8 +158,8 @@
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            BackColor = SystemColors.ControlDark;
-            ClientSize = new Size(562, 586);
+            BackColor = SystemColors.Highlight;
+            ClientSize = new Size(613, 586);
             Controls.Add(txtNotice);
             Controls.Add(DataGridCvUi);
             Controls.Add(btInput);

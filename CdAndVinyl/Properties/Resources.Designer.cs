@@ -69,5 +69,15 @@ namespace CdAndVinyl.Properties {
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap _6f86c96d_0001_0004_0000_000001456559_w1200_r1_fpx49_fpy71 {
+            get {
+                object obj = ResourceManager.GetObject("6f86c96d-0001-0004-0000-000001456559_w1200_r1_fpx49_fpy71", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
     }
 }
