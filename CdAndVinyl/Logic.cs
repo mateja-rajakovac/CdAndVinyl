@@ -1,13 +1,17 @@
-﻿using System;
+﻿using Microsoft.VisualBasic.ApplicationServices;
+using System;
 using System.Collections.Generic;
 using System.Text;
 using System.Text.Json;
+using System.IO;
 
 namespace CdAndVinyl
 {
     public class Logic
     {
         public List<Medium> collection = new List<Medium>();
+        string folder_path = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "Files");
+        string file_path = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "Files", "jsonSaved.json");
 
 
         public bool check_space(string type, string artist, string title)
@@ -50,11 +54,15 @@ namespace CdAndVinyl
         public void new_medium(Medium m)
         {
             collection.Add(m);
+        }
 
+        void json_save()
+        {
+            Directory.CreateDirectory(folder_path);
             var options = new JsonSerializerOptions();
             options.WriteIndented = true;
-
-            string jsonstr = JsonSerializer.Serialize(collection);
+            string json = JsonSerializer.Serialize(collection, options);
+            File.WriteAllText(file_path, json);
 
         }
 
