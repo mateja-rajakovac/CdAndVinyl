@@ -54,6 +54,7 @@ namespace CdAndVinyl
         public void new_medium(Medium m)
         {
             collection.Add(m);
+            json_save();
         }
 
         void json_save()
